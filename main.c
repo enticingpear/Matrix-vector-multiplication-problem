@@ -45,6 +45,13 @@ int main(int argc, char **argv)
     long *student = matrix_vector_multiplication(matrix, vector, num_rows, num_cols);
     long *reference = reference_matrix_vector_multiplication(matrix, vector, num_rows, num_cols);
 
+    if (student == NULL) {
+        perror("Implementation missing\n");
+        free(matrix);
+        free(vector);
+        exit(1);
+    }
+
     if (vectors_equal(student, reference, num_rows)) {
         printf("Correct\n");
     } else {
