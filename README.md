@@ -1,0 +1,1 @@
+Run the program using `./main <num_rows> <num_cols>`
